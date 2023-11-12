@@ -4,15 +4,14 @@
             <span class="login_text">VIEW PROFILE</span><br>
             <img src="../../../assets/line.svg" style="margin-top: -25px;" />
         </div>
+        <div class="d-flex justify-content-between">
+            <span class="login_button" (click)="changePassword()">Change Password</span><span class="login_button" (click)="logout()">Logout</span>
+        </div>
         <table class="table ms-4 table_width">
             <thead class="table_head">
                 <tr *ngFor="let user of userDetails | keyvalue; let i = index">
                     <th class="labels">{{user.key }}</th>
                     <td>{{user.value || '-'}}</td>
-                </tr>
-                <tr>
-                    <th class="labels">Name</th>
-                    <td>Irfan</td>
                 </tr>
             </thead>
         </table>
