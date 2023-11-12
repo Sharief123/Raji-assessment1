@@ -1,0 +1,20 @@
+<div class="login-bg2">
+    <div class="card border border-1 w-25 p-4 login-bg">
+        <div class="mt-3">
+            <span class="login_text">VIEW PROFILE</span><br>
+            <img src="../../../assets/line.svg" style="margin-top: -25px;" />
+        </div>
+        <table class="table ms-4 table_width">
+            <thead class="table_head">
+                <tr *ngFor="let user of userDetails | keyvalue; let i = index">
+                    <th class="labels">{{user.key }}</th>
+                    <td>{{user.value || '-'}}</td>
+                </tr>
+                <tr>
+                    <th class="labels">Name</th>
+                    <td>Irfan</td>
+                </tr>
+            </thead>
+        </table>
+    </div>
+</div>
